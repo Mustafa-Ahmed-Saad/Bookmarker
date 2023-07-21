@@ -1,0 +1,143 @@
+/* i change color of text when select because if i don't do that the text "Bookmark your favorite sites" will hidden when select it  */
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff;
+  background: #fec260;
+}
+::selection {
+  color: #fff;
+  background: #fec260;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  width: max-content;
+  cursor: pointer;
+  z-index: 0;
+  font-size: 50px;
+}
+
+h1::after {
+  content: "";
+  width: 100%;
+  height: 30%;
+  background-color: #fec260;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+  transition: 0.3s;
+}
+
+h3 {
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: "Righteous", cursive;
+}
+
+h1:hover::after {
+  height: 70%;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+/* start override bootstrap */
+.form-control:focus {
+  border-color: #d99c39;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+/* start btns */
+/* we can do this 1/2 */
+
+.btn-delete,
+.btn-visit,
+.btn-submit {
+  --bs-btn-color: #fff;
+  --bs-btn-hover-color: #fff;
+}
+
+.btn-delete {
+  --bs-btn-bg: #eb1d36;
+  --bs-btn-border-color: #eb1d36;
+  /* when hover */
+  --bs-btn-hover-bg: #d30820;
+  --bs-btn-hover-border-color: #ba081d;
+}
+
+.btn-submit {
+  --bs-btn-bg: #d1512d;
+  --bs-btn-border-color: #d1512d;
+  /* when hover */
+  --bs-btn-hover-bg: #bb4120;
+  --bs-btn-hover-border-color: #a03315;
+}
+
+.btn-visit {
+  --bs-btn-bg: #9eb23b;
+  --bs-btn-border-color: #9eb23b;
+  /* when hover */
+  --bs-btn-hover-bg: #8a9e23;
+  --bs-btn-hover-border-color: #6e8018;
+}
+
+/* or do this 2/2 */
+/*
+.btn-delete {
+  background-color: #eb1d36 !important;
+  border-color: #eb1d36 !important;
+}
+.btn-delete:hover {
+  background-color: #d30820 !important;
+}
+
+.btn-visit {
+  background-color: #9eb23b !important;
+  border-color: #9eb23b !important;
+}
+.btn-visit:hover {
+  background-color: #8a9e23 !important;
+}
+
+.btn-submit {
+  background-color: #d1512d !important;
+  border-color: #d1512d !important;
+}
+.btn-submit:hover {
+  background-color: #bb4120 !important;
+}
+
+.btn-delete,
+.btn-visit,
+.btn-submit {
+  color: #fff !important;
+}
+.btn-delete:active,
+.btn-visit:active,
+.btn-submit:active {
+  background-color: transparent !important;
+  color: #000 !important;
+  border-color: #000 !important;
+}
+*/
+/* end btns */
+/* end override bootstrap */
+
+.border-t-b-dots {
+  border: 2px dotted;
+  border-left: 0;
+  border-right: 0;
+}
+
+.hide-overflow-text {
+  text-overflow: ellipsis;
+  max-width: 200px;
+  overflow: hidden;
+}
+
+.w-15px {
+  width: 15px;
+  height: 15px;
+}
