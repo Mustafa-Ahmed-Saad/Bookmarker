@@ -221,6 +221,11 @@ function search() {
 function clearInputs() {
   siteNameInput.value = "";
   siteURLInput.value = "";
+
+  removeClass(siteNameInput, "is-invalid");
+  removeClass(siteNameInput, "is-valid");
+  removeClass(siteURLInput, "is-invalid");
+  removeClass(siteURLInput, "is-valid");
 }
 
 function saveInLocalStorage(key, value) {
@@ -248,6 +253,13 @@ function removeClass(el, className = "d-none") {
 }
 
 function showModal(ui) {
+  removeClass(siteNameInput, "is-invalid");
+  removeClass(siteNameInput, "is-valid");
+  removeClass(siteURLInput, "is-invalid");
+  removeClass(siteURLInput, "is-valid");
+
   modalBody.innerHTML = ui;
   showModuleBtn.click();
 }
+
+// -------------------------------------------------
